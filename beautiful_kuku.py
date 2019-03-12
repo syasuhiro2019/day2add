@@ -1,15 +1,15 @@
 def main():
-    row = int(input('行数を入力してください > '))
-    column = int(input('桁数を入力してください > '))
+    # row = int(input('行数を入力してください > '))
+    # column = int(input('桁数を入力してください > '))
+    row = 9
+    column = 9
 
     for row in range(1, row + 1):
         for col in range(1, column + 1):
-            value = row * col
+            product = row * col
 
-            if value < 10:
-                print(f'{col} ✕ {row} =  {value} | ', end='   ')
-            else:
-                print(f'{col} ✕ {row} = {value} | ', end='   ')
+            padded_product = str(product).rjust(2)
+            print(f'{col} ✕ {row} = {padded_product} | ', end='   ')
         print()
 
 
